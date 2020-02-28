@@ -16,7 +16,7 @@ class QrScanPageState extends State<QrScanPage>{
   Widget build(BuildContext context){/* CONSTRUYENO*/
     return Scaffold(
       appBar: AppBar(
-        title: Text('LECTO DE QR PARA URL GUIADAS')
+        title: Text('LECTOR DE QR PARA URL GUIADAS')
       ),
       body: Container(
         child: Column(
@@ -62,11 +62,11 @@ class QrScanPageState extends State<QrScanPage>{
         if (await canLaunch(qrcode)) {
           await launch(qrcode);
         } else {
-          throw 'La URL no existe'; //'La URL no existe $qrcode'
+          throw 'La URL no existe $qrcode';
         }
       // END
       setState(
-        () => this._qrcode = qrcode
+        () => this._qrcode = '' // qrcode
         );
     }on PlatformException catch(e){
       if (e.code == BarcodeScanner.CameraAccessDenied) {
