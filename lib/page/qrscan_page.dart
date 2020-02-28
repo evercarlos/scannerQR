@@ -16,7 +16,7 @@ class QrScanPageState extends State<QrScanPage>{
   Widget build(BuildContext context){/* CONSTRUYENO*/
     return Scaffold(
       appBar: AppBar(
-        title: Text('LECTOR DE QR PARA URL GUIADAS')
+        title: Text('Lector de QR para URL guiadas')
       ),
       body: Container(
         child: Column(
